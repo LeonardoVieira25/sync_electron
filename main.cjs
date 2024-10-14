@@ -1,5 +1,6 @@
 const { app, BrowserWindow, Menu } = require('electron');
-const path = require('path');
+
+const URL_PATH = 'https://solar.tecsci.com.br/';
 
 // Ensure the app is a single instance
 const gotTheLock = app.requestSingleInstanceLock();
@@ -22,9 +23,8 @@ if (!gotTheLock) {
       }
     });
 
-    mainWindow.loadURL('https://solar.tecsci.com.br/'); // Adjust the URL to your dev server
+    mainWindow.loadURL(URL_PATH);
 
-    // Hide the menu
     mainWindow.setMenuBarVisibility(false);
   }
 
